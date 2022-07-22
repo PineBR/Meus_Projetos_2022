@@ -1,0 +1,87 @@
+.alinharRotulos {
+    text-align: left;
+    font-size: 20px;
+    width: 100%;
+}
+.alinhaBtns {
+    width:20%;
+    background-color: #ff3c03;
+    color:white;
+    border:1000px;
+    padding:10px;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bolder;
+}
+input, select {
+    width: 100%;
+    font-size: larger;
+    align-items: rigth;
+    margin-left: 5px;
+}
+p {
+    text-align: left;
+    margin-left: 20px;
+    font-size: 20px;
+
+}
+table {
+    background-color: #191051;
+    border-radius: 15px; 
+    color:white;
+    padding:0 20px 0 10px ;
+    width:850px;
+    margin:auto;
+    
+}
+caption {
+    color:#191051; 
+    font-weight: bold; 
+    font-size: 30px;
+}
+.logo img {
+    width:12%;
+    float: right;
+    margin-right: 20px;
+}
+body {
+    width: 100%;
+    overflow:hidden;
+    font-family: 'Kanit', sans-serif;
+}
+header {
+    border-style: double;
+    border-color: #191051;
+    border-width: 0 0 10px 0;
+    width: 100%;
+}
+.entrada img{
+    width: 25%;
+    padding: 50px 0 10px 0;
+    margin-left: 500px;
+
+
+}
+footer p {
+    margin: 100px 0 10px 0;
+    text-align: center;
+    font-size: 17px;
+
+}
+.startBtn {
+    width:10%;
+    align-content: center;
+    background-color: #191051;
+    color:white;
+    border:1000px;
+    padding:5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: 'Kanit', sans-serif;
+    margin-left: 500px;
+
+}

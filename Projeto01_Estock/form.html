@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/funcoes.js"></script>
+    <title>Estock</title>
+</head>
+
+<header>
+    <div class="logo">
+        <img src="img/ESTOCK.png">
+        <p>Itens no estoque: <span id="totalEstoque">0</span></p>
+    </div>
+</header>
+<body onload="carregarTotalEstoque('totalEstoque')"> 
+    
+    <!--Formulário: Nome, código e quantidade de produtos-->
+    <form>
+        <table>
+            <caption>Cadastro de Insumos da Construção Civil</caption>
+            <!--1º Nome do produto-->
+            <tr>
+                <td class="alinharRotulos">Descrição do insumo:</td>
+            </tr>
+            <tr>
+                <td><input id="txtNomeProduto" type="text"></td>
+            </tr>
+            <!--2º Código do produto-->
+            <tr>
+                <td class="alinharRotulos">Código do insumo:</td>
+            </tr>
+            <tr>
+                <td><input id="txtCodProduto" type="text"></td>
+            </tr>
+            <!--3º Unidade do produto-->
+            <tr>
+                <td class="alinharRotulos">Unidade de medida:</td>
+            </tr>
+            <tr>
+                <td><input id="txtUniProduto" type="text"></td>
+            </tr>
+            <!--4º Custo do produto-->
+            <tr>
+                <td class="alinharRotulos">Custo Unitário:</td>
+            </tr>
+            <tr>
+                <td><input id="txtCustProduto" type="number"></td>
+            </tr>
+            <!--5º Quantidade do produto-->
+            <tr>
+                <td class="alinharRotulos">Quantidade:</td>
+            </tr>
+            <tr>
+                <td><input id="QtidadeProduto" type="number"></td>
+            </tr>
+            <!--6º Modalidade de compra-->
+            <tr>
+                <td class="alinharRotulos">Modalidade de compra:</td>
+            </tr>
+            <tr>
+                <td>
+                    <select id="txtModalProduto">
+                        <option value="Compra direta">Compra direta</option>
+                        <option value="Licitação">Licitação</option>
+                        <option value="Dispensa de licitação">Dispensa de licitação</option>
+                        <option value="Saldo Emergencial">Saldo Emergencial</option>
+                    </select>
+                </td>
+            </tr>
+            <!--Botoes-->
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" value="Cadastrar" class="alinhaBtns" onclick="validarProduto('txtNomeProduto','txtCodProduto','txtUniProduto','txtCustProduto','QtidadeProduto','txtModalProduto')">
+                    <input type="button" value="Ver estoque" class="alinhaBtns" onclick="window.open('estock.html','_self')">
+                    <input type="reset" value="Limpar" class="alinhaBtns">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
