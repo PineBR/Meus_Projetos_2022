@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: whitesmoke;
+  overflow: hidden;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  font-size: xx-large;
+}
+
+ul {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 20px;
+}
+
+.entrada img{
+  width: 400px;
+  display: block;
+  margin: auto;
+  padding-top: 10%;
+}
+
+.startBtn {
+  display: block;
+  margin: auto;
+  width: 200px;
+  font-size:20px;
+}
+
+.startBtn:hover {
+  background: linear-gradient(to right, #03a037 , #0e7ceb);
+  color:white;
+  width: 250px;
+  font-size:30px;
+  font-family: 'Permanent Marker', cursive;
+
+}
+
+footer {
+  width: 100%;
+  position: relative;
+  height: 200vh;
+}
+
+.waves {
+  bottom: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 120%;
+  z-index: -100;
+}
+
+.wave1 {
+  animation: moveWave1 3s ease-in-out infinite alternate;
+}
+
+@keyframes moveWave1 {
+  from {
+    transform: translateX(-200px);
+  }
+}
+
+.wave2 {
+  animation: moveWave2 3s 1.5s ease-in-out infinite alternate;
+
+}
+
+@keyframes moveWave2 {
+  from {
+    transform: translateX(-200px);
+  }
+}
+
+.assinatura {
+  position: absolute;
+	bottom: 0;
+  color: white;
+}
+
+.assinatura p {
+  font-size:medium;
+}
+
+.header button {
+  position: absolute;
+  right: 18%;
+  margin-top: -30px;
+} 
+
+.header i {
+  font-size: 22px;
+} 
+
+.to-do {
+  margin-top: 40px;
+  width: 60%;
+}
+
+.textInsert {
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  width: 90%;
+}
+
+.divInsert {
+  padding: 10px;
+  background-color: #282828;
+  border-radius: 10px;
+  display: flex;
+  box-shadow: 6px 5px 10px 0px grey;
+}
+
+button {
+  width: 10%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.bx-plus {
+  font-size: 30px;
+  margin-left: 10px;
+  background-color: #0e7ceb;
+  padding: 5px;
+  color: white;
+}
+
+.divLi {
+  margin-top: 20px;
+  padding: 10px;
+  background: linear-gradient(to right, #821bdf , #0e7ceb);
+  border-radius: 10px;
+  box-shadow: 6px 5px 10px 0px grey;
+  display: flex;
+  align-items: center;
+}
+
+.divLi span {
+  width: 80%;
+  color: white;
+}
+
+.divLi input {
+  width: 10%;
+  outline: none;
+  accent-color: currentcolor;
+}
+
+.divLi i {
+  font-size: 22px;
+  color: white;
+}
+
+li {
+  list-style-type: none;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+@media (max-width: 775px) {
+  input {
+    width: 70%;
+  }
+
+  .divInsert button {
+    width: 30%;
+  }
+
+  i {
+    font-size: 30px;
+    padding: 0px;
+  }
+
+  p {
+    font-size: x-large;
+  }
+}

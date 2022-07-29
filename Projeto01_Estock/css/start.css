@@ -1,0 +1,33 @@
+.entrada img{
+    width: 25%;
+    padding: 50px 0 10px 0;
+    margin-left: 500px;
+}
+
+footer p {
+    margin: 100px 0 10px 0;
+    text-align: center;
+    font-size: 15px;
+    color: #191051;
+    font-weight: bold;
+
+}
+.startBtn {
+    width:10%;
+    align-content: center;
+    background-color: #191051;
+    color:white;
+    border:1000px;
+    padding:5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: 'Kanit', sans-serif;
+    margin-left: 500px;
+
+}
+.startBtn:hover {
+    background: linear-gradient(to right, #fffb0b, #ff3c03);
+    color:#191051;
+}

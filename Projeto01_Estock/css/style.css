@@ -15,6 +15,12 @@
     font-size: 20px;
     font-weight: bolder;
 }
+
+.alinhaBtns:hover {
+    background-color: white;
+    color:#191051;
+}
+
 input, select {
     width: 100%;
     font-size: larger;
@@ -28,12 +34,13 @@ p {
 
 }
 table {
-    background-color: #191051;
+    background: linear-gradient(to top, #291892, #191051, #070227);
     border-radius: 15px; 
     color:white;
     padding:0 20px 0 10px ;
     width:850px;
     margin:auto;
+    box-shadow: 6px 5px 10px 0px black;
     
 }
 caption {
