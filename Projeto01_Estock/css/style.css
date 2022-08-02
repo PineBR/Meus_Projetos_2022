@@ -69,7 +69,6 @@ header {
     padding: 50px 0 10px 0;
     margin-left: 500px;
 
-
 }
 footer p {
     margin: 100px 0 10px 0;
@@ -90,5 +89,165 @@ footer p {
     font-weight: bolder;
     font-family: 'Kanit', sans-serif;
     margin-left: 500px;
+}
+/* Responsividade */
+/* Tablet 768px */
+@media (max-width: 768px) {
+    .alinharRotulos {
+        font-size: 15px;
+    }
+    .alinhaBtns {
+        width:25%;
+        padding:7px;
+        border-radius: 10px;
+        margin: 10px;
+    }
 
+    input, select {
+        width: 100%;
+        font-size: medium;
+        align-items: rigth;
+    }
+    p {
+        margin-left: 20px;
+        font-size: 20px;
+    }
+    table {
+        border-radius: 15px; 
+        width:650px;
+    }
+    caption {
+        font-size: 27px;
+        padding-top: 4%;
+    }
+    .logo img {
+        width:10%;
+        position: relative;
+        margin-right: 10px;
+    }
+
+    header {
+        border-width: 0 0 5px 0;
+    }
+}
+/* Mobile L 425px */
+@media (max-width: 425px) {
+    .alinharRotulos {
+        font-size: 14px;
+    }
+    .alinhaBtns {
+        width:25%;
+        padding:5px;
+        border-radius: 8px;
+        margin: 7px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    input, select {
+        width: 100%;
+        font-size: 14px;
+        align-items: rigth;
+    }
+    p {
+        margin-left: 15px;
+        font-size: 15px;
+    }
+    table {
+        border-radius: 13px; 
+        width:405px;
+    }
+    caption {
+        font-size: 19px;
+        padding-top: 4%;
+    }
+    .logo img {
+        width:15%;
+        position: relative;
+        margin-right: 10px;
+    }
+
+    header {
+        border-width: 0 0 5px 0;
+    }
+}
+/* Mobile M 375px */
+@media (max-width: 375px) {
+    .alinharRotulos {
+        font-size: 14px;
+    }
+    .alinhaBtns {
+        width:28%;
+        padding:5px;
+        border-radius: 6px;
+        margin: 6px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    input, select {
+        width: 100%;
+        font-size: 14px;
+        align-items: rigth;
+    }
+    p {
+        margin-left: 15px;
+        font-size: 15px;
+    }
+    table {
+        border-radius: 13px; 
+        width:365px;
+    }
+    caption {
+        font-size: 15px;
+        padding-top: 4%;
+    }
+    .logo img {
+        width:15%;
+        position: relative;
+        margin-right: 10px;
+    }
+
+    header {
+        border-width: 0 0 5px 0;
+    }
+}
+/* Mobile S 320px */
+@media (max-width: 320px) {
+    .alinharRotulos {
+        font-size: 13px;
+    }
+    .alinhaBtns {
+        width: 28%;
+        padding:3px;
+        border-radius: 4px;
+        margin: 3px;
+        font-size: 12px;
+        font-weight: normal;
+    }
+
+    input, select {
+        font-size: 13px;
+    }
+    p {
+        margin-left: 15px;
+        font-size: 15px;
+    }
+    table {
+        border-radius: 9px; 
+        width:308px;
+
+    }
+    caption {
+        font-size: 13px;
+        padding-top: 10%;
+    }
+    .logo img {
+        width:20%;
+        margin-right: 10px;
+    }
+
+    header {
+        border-width: 0 0 5px 0;
+    }
 }

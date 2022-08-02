@@ -1,33 +1,95 @@
 .entrada img{
-    width: 25%;
-    padding: 50px 0 10px 0;
-    margin-left: 500px;
+    width: 20%;
+    display: block;
+    margin: auto;
+    padding-top: 9%;
 }
 
-footer p {
-    margin: 100px 0 10px 0;
-    text-align: center;
-    font-size: 15px;
+footer {
     color: #191051;
     font-weight: bold;
-
+    display: block;
+    margin: auto;
+    padding-top: 8%;
 }
+
+.assinatura {
+    position: relative;
+	bottom: 0;
+    font-size: small;
+    text-align: center;
+}
+
 .startBtn {
+    display: block;
     width:10%;
-    align-content: center;
     background-color: #191051;
     color:white;
-    border:1000px;
-    padding:5px;
     border-radius: 4px;
-    cursor: pointer;
     font-size: 30px;
     font-weight: bolder;
     font-family: 'Kanit', sans-serif;
-    margin-left: 500px;
-
+    margin: auto;
 }
+
 .startBtn:hover {
     background: linear-gradient(to right, #fffb0b, #ff3c03);
     color:#191051;
+}
+
+/* Responsividade*/
+/*Tablet 768px*/
+@media (max-width: 768px) {
+    .entrada img{
+        width: 30%;
+        padding-top: 15%;
+    }
+    .startBtn {
+        width:13%;
+        border-radius: 7px;
+        font-size: 17px;
+    }
+}
+/*Mobile L 425px*/
+@media (max-width: 425px) {
+    .entrada img{
+        width: 40%;
+        padding-top: 30%;
+    }
+
+    footer {
+        padding-top: 30%;
+    }
+
+    .assinatura {
+        font-size: x-small;
+    }
+
+    .startBtn {
+        width:20%;
+        border-radius: 7px;
+        font-size: 18px;
+    }
+}
+/*Mobile M 375px*/
+@media (max-width: 375px) {
+    .entrada img{
+        width: 55%;
+        padding-top: 35%;
+    }
+    .startBtn {
+        width:27%;
+        border-radius: 7px;
+        font-size: 20px;
+    }
+}
+/*Mobile S 320px*/
+@media (max-width: 320px) {
+    .entrada img{
+        padding-top: 50%;
+    }
+    .startBtn {
+        width:28%;
+        font-size: 20px;
+    }
 }
