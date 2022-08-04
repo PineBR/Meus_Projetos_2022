@@ -1,10 +1,15 @@
 //-----------------------------------------------------------------------------------------------------------
-// Função: validarProduto(idNomeProduto, idCodProduto, idUniProduto, idCustProduto, idQtidadeProduto, idModalProduto)
-// Verifica se os campos estão preenchidos corretamente
-// OBS: Se faltar alguma informação aparecerá uma mensagem de erro. Em caso de 
-// sucesso (todas as informações preenchidas), chama a função cadastrarProduto(...)
+// Verificando o preenchimento dos campos
+// Se não preencher algum campo aparecerá uma mensagem de erro - alert
+// Se preenchido corretamente, chama a função cadastrar 
 // Retorno: nenhum
 //-----------------------------------------------------------------------------------------------------------
+
+//>>>> Codando
+/*
+getElementById = retorna um elemento que representa o elemento cuja id corresponde à string.
+id = elemento a ser localizado.
+*/
 function validarProduto(idNomeProduto, idCodProduto, idUniProduto, idCustProduto, idQtidadeProduto, idModalProduto) {
     let nome = document.getElementById(idNomeProduto).value;
     let codigo = document.getElementById(idCodProduto).value;
@@ -12,35 +17,50 @@ function validarProduto(idNomeProduto, idCodProduto, idUniProduto, idCustProduto
     let custo = document.getElementById(idCustProduto).value;
     let qtidade = document.getElementById(idQtidadeProduto).value;
     let modo = document.getElementById(idModalProduto).value;
-
+/*
+alert = instrui o navegador a exibir uma caixa de diálogo com uma mensagem
+        e espera até que o usuário descarte a caixa de diálogo.
+*/
     if (nome == "")
-        alert("Nome do produto não pode estar em branco. Favor preenchê-lo!");
+        alert("Insira uma descrição para o insumo!");
     else if (codigo == "")
-        alert("Número da OF não pode estar em branco. Favor preenchê-lo!");
+        alert("Você precisa informar o número da OF!");
     else if (unidade == "")
-        alert("Unidade do produto não pode estar em branco. Favor preenchê-lo!");
+        alert("Não esqueça a unidade de medida!");
     else if (custo == "")
-        alert("Custo do produto não pode estar em branco. Favor preenchê-lo!");
+        alert("O campo custo não pode ficar vazio!");
     else if (qtidade == "")
-        alert("Quantidade do produto não pode estar em branco. Favor preenchê-lo!");
+        alert("Qual a quantidade do insumo?");
     else cadastrarProduto(nome, codigo, unidade, parseFloat(custo), parseFloat(qtidade), modo);
 }
 //-----------------------------------------------------------------------------------------------------------
-// Função: cadastrarProduto(produto, codig, unid, cust, qtidade, modal)
-// Cadastra um novo produto (nome, código, unidade, custo, quantidade, modo) no estoque
-// Parâmetros:
-// OBS: Apos cadastrar o novo insumo, atualiza a quantidade de itens registrados, ou seja, chama 
-// a função atualizarTotalEstoque()
+// Cadastro de novos insumos no estoque
+// Cadastra o novo insumo, atualiza a quantidade de itens registrados - atualizarTotalEstoque()
 // Retorno: nenhum
 //-----------------------------------------------------------------------------------------------------------
 function cadastrarProduto(produto, codig, unid, cust, qtidade, modal) {
     let novoProduto = {nome:produto, codigo:codig, unidade:unid, custo:cust, quantidade:qtidade, modo:modal};
-
+/*
+typeof = operador retorna uma string indicando o tipo de operando não avaliado
+        retorna um objeto.
+        null = objeto.
+        Undefined = indefinido.      
+Storage = interface da API de armazenamento da web que fornece acesso a uma sessão local
+        de um domínio específico.
+JSON.parse = método que analisa uma string JSON, construindo o valor ou objeto JS descrito pela string.
+push = método que adiciona 1 ou mais elementos ao final de um array e retorna o novo comprimento pela string.
+localStorage = dados armazenados e salvos na sessão do navegador sem tempo de expiração.
+getItem = método da Storage, ao passar um nome de chave, retornará o valor dessa chave,ou NULL se a chave não existir.
+setItem = método da Storage, quando passado um nome e valor de chave, adicionará essa chave ao Storage objeto fornecido
+        ou atualizará o valor dessa chave se ela já existir.      
+JSON.stringrify = método converte um objeto ou valor JS em uma string JSON.
+location.reload = método recarrega a URL atual, como o botão atualizar.
+*/
     if (typeof(Storage) !== "undefined") {
         let produtos = localStorage.getItem("produtos");
-        if (produtos == null) produtos = []; // Nenhum produto ainda foi cadastrado
+        if (produtos == null) produtos = []; // Nenhum insumo foi cadastrado
         else produtos = JSON.parse(produtos);
-        produtos.push(novoProduto); // Adiciona um novo produto
+        produtos.push(novoProduto); // Adiciona um novo insumo
         localStorage.setItem("produtos",JSON.stringify(produtos))
         alert("Foram cadastradas com sucesso "+qtidade+" "+unid+" do insumo "+produto+"!");
         atualizarTotalEstoque("totalEstoque");
@@ -48,22 +68,20 @@ function cadastrarProduto(produto, codig, unid, cust, qtidade, modal) {
     } 
     else alert("A versão do seu navegador é muito antiga. Por isso, não será possível executar essa aplicação");
 }
-
 //-----------------------------------------------------------------------------------------------------------
-// Função: atualizarTotalEstoque(idCampo)
 // Incrementa a quantidade de insumos cadastrados no estoque
-// Parâmetros:
-// - idCampo: identificador do campo que contem a quantidade de insumos;
+// idCampo: identificador do campo que contem a quantidade de insumos;
 // Retorno: nenhum
 //-----------------------------------------------------------------------------------------------------------
+/*
+innerHTML = define ou retorna o conteúdo HTML de um elemento.
+*/
 function atualizarTotalEstoque(idCampo) {
     localStorage.setItem("totalEstoque",++document.getElementById(idCampo).innerHTML)
 }
 //-----------------------------------------------------------------------------------------------------------
-// Função: carregarTotalEstoque(idCampo)
 // Incrementa a quantidade de insumos cadastrados no estoque
-// Parâmetros:
-// - idCampo: identificador do campo que contem a quantidade de insumos;
+// idCampo: identificador do campo que contem a quantidade de insumos;
 // Retorno: nenhum
 //-----------------------------------------------------------------------------------------------------------
 function carregarTotalEstoque(idCampo) {
@@ -74,11 +92,14 @@ function carregarTotalEstoque(idCampo) {
     }
     else alert("A versão do seu navegador é muito antiga. Por isso, não será possível executar essa aplicação");
 }
-
 //-----------------------------------------------------------------------------------------------------------
 // Exibe todos os insumos cadastrados
 // Retorno: nenhum
 //-----------------------------------------------------------------------------------------------------------
+/*
+document.write = método grava uma string de texto em um fluxo de documento aberto "automaticamente" por document.open.
+forEach = método executa uma função fornecida uma vez para cada elemento da matriz.
+*/
 function listarEstoque() {
     if (typeof(Storage) !== "undefined") {
         let produtos = localStorage.getItem("produtos");
